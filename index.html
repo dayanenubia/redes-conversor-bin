@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Conversão de bases numéricas</title>
-    <meta charset="utf-8">
-    <script src="formulas.js"></script>
-</head>
-<body>
-	<h1>Conversão de bases numéricas</h1>
-	<form>
-		<label for="decimal">Decimal:</label>
-		<input type="text" id="decimal" name="decimal">
-		<br><br>
-		<label for="binario">Binário:</label>
-		<input type="text" id="binario" name="binario">
-		<br><br>
-		<label for="hexadecimal">Hexadecimal:</label>
-		<input type="text" id="hexadecimal" name="hexadecimal">
-		<br><br>
-		<input type="button" value="Converter" onclick="converter()">
-		<input type="reset" value="Limpar">
-	</form>
+    <head>
+        <title>Conversão de bases</title>
+        <script type="text/javascript" src="formulas.js"></script>
+    </head>
+    <body>
+        <h1>Conversor de bases</h1>
+        <form>
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" name="valor" required>
 
-</body>
-</html>
+            <label for="resul">Resultado:</label>
+            <input type="number" id="resul" name="resul" required>
+    
+            <label for="de">Converter de:</label>
+            <select id="de" name="de">
+                <option value="bin">Binário</option>
+                <option value="dec">Decimal</option>
+                <option value="hex">Hexadecimal</option>
+            </select>
+    
+            <label for="para">Converter para:</label>
+            <select id="para" name="para">
+                <option value="bin">Binário</option>
+                <option value="dec">Decimal</option>
+                <option value="hex">Hexadecimal</option>
+            </select>
+    
+            <button type="button" onclick="converter()">Converter</button>
+        </form>
+    
+        <p id="resultado"></p>
+    </body>
+    </html>
+
 
 
 
